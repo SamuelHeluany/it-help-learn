@@ -92,7 +92,7 @@ export function ForgotPasswordForm({}: React.ComponentPropsWithoutRef<"div">) {
                   {error && <p className="text-sm text-red-500">{error}</p>}
                   <button
                     type="submit"
-                    className="w-100 h-8 text-white bg-[#6E6CDF] text-[15px] cursor-pointer hover:bg-[#716ffc] rounded-sm"
+                    className="w-100 h-8 text-white bg-[#6E6CDF] text-[17px] cursor-pointer hover:bg-[#716ffc] rounded-sm"
                     disabled={isLoading}
                   >
                     {isLoading ? "Enviando..." : "Enviar email"}
