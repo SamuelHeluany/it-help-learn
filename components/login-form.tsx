@@ -95,7 +95,7 @@ export function LoginForm({}: React.ComponentPropsWithoutRef<"div">) {
               {error && <p className="text-sm text-red-500">{error}</p>}
               <button
                 type="submit"
-                className="w-100 h-8 text-white bg-[#6E6CDF] text-xl rounded-sm"
+                className="w-100 h-8 text-white bg-[#6E6CDF] text-lg cursor-pointer hover:bg-[#716ffc] rounded-sm"
                 disabled={isLoading}
               >
                 {isLoading ? "Entrando..." : "Entrar"}
