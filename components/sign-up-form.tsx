@@ -110,7 +110,7 @@ export function SignUpForm({}: React.ComponentPropsWithoutRef<"div">) {
             {error && <p className="text-sm text-red-500">{error}</p>}
             <button
               type="submit"
-              className="w-100 h-8 text-white bg-[#6E6CDF] text-lg cursor-pointer hover:bg-[#716ffc] rounded-sm"
+              className="w-100 h-8 text-white bg-[#6E6CDF] text-[17px] cursor-pointer hover:bg-[#716ffc] rounded-sm"
               disabled={isLoading}
             >
               {isLoading ? "Criando conta..." : "Criar conta"}
@@ -118,7 +118,10 @@ export function SignUpForm({}: React.ComponentPropsWithoutRef<"div">) {
           </div>
           <div className="mt-4 text-center text-sm text-gray-400">
             Já tem uma conta?{" "}
-            <Link href="/auth/login" className="underline underline-offset-4">
+            <Link
+              href="/auth/login"
+              className="underline underline-offset-4 text-[#6E6CDF]"
+            >
               Entre aqui!
             </Link>
           </div>
