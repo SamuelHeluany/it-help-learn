@@ -1,10 +1,7 @@
 "use client";
 
 import { useState } from "react";
-
-import { cn } from "@/lib/utils";
 import { createClient } from "@/lib/client";
-import { Button } from "@/components/ui/button";
 import {
   Card,
   CardContent,
@@ -17,10 +14,7 @@ import { Label } from "@/components/ui/label";
 import Link from "next/link";
 import Image from "next/image";
 
-export function ForgotPasswordForm({
-  className,
-  ...props
-}: React.ComponentPropsWithoutRef<"div">) {
+export function ForgotPasswordForm({}: React.ComponentPropsWithoutRef<"div">) {
   const [email, setEmail] = useState("");
   const [error, setError] = useState<string | null>(null);
   const [success, setSuccess] = useState(false);
