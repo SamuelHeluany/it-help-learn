@@ -43,7 +43,7 @@ export function LoginForm({}: React.ComponentPropsWithoutRef<"div">) {
     <div className="flex justify-center">
       <div className="relative w-150 h-175">
         <Image
-          src="/it-help-image-login.png"
+          src="/it-help-image-login.jpg"
           alt="Ilustração do Login de Suporte"
           fill
           className="object-cover rounded-l-lg" // Preenche todo o espaço sem deformar
