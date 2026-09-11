@@ -31,7 +31,7 @@ export function LoginForm({}: React.ComponentPropsWithoutRef<"div">) {
       if (error) throw error;
       // Update this route to redirect to an authenticated route. The user already has an active session.
       const next = new URLSearchParams(window.location.search).get("next");
-      router.push(safeNextPath(next, "/protected"));
+      router.push(safeNextPath(next, "/painel"));
     } catch (error: unknown) {
       setError(error instanceof Error ? error.message : "An error occurred");
     } finally {

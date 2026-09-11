@@ -34,7 +34,7 @@ export function SignUpForm({}: React.ComponentPropsWithoutRef<"div">) {
         email,
         password,
         options: {
-          emailRedirectTo: `${window.location.origin}/protected`,
+          emailRedirectTo: `${window.location.origin}/painel`,
         },
       });
       if (error) throw error;
