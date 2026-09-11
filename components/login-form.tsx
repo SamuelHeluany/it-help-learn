@@ -46,6 +46,7 @@ export function LoginForm({}: React.ComponentPropsWithoutRef<"div">) {
           src="/it-help-image-login.jpg"
           alt="Ilustração do Login de Suporte"
           fill
+          sizes="(max-width:600px) (max-height:700px)"
           className="object-cover rounded-l-lg" // Preenche todo o espaço sem deformar
           priority
         />

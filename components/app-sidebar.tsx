@@ -1,60 +1,47 @@
-import {
-  Sidebar,
-  SidebarContent,
-  SidebarGroup,
-  SidebarGroupContent,
-  SidebarGroupLabel,
-  SidebarMenu,
-  SidebarMenuButton,
-  SidebarMenuItem,
-} from "@/components/ui/sidebar";
-import { Cog, Plus, Tickets, User } from "lucide-react";
-
-const items = [
-  {
-    title: "Abrir ticket",
-    url: "",
-    icon: Plus,
-  },
-  {
-    title: "Tickets",
-    url: "",
-    icon: Tickets,
-  },
-  {
-    title: "Configurações",
-    url: "",
-    icon: Cog,
-  },
-  {
-    title: "Usuários",
-    url: "",
-    icon: User,
-  },
-];
+import { SidebarMenuButton } from "@/components/ui/sidebar";
+import { Cog, Plus, Ticket, User } from "lucide-react";
 
 export function AppSidebar() {
   return (
-    <Sidebar collapsible="icon">
-      <SidebarContent>
-        <SidebarGroup>
-          <SidebarGroupLabel>Sistema de Tickets</SidebarGroupLabel>
-          <SidebarGroupContent>
-            <SidebarMenu>
-              {items.map((item) => (
-                <SidebarMenuItem key={item.title}>
-                  <SidebarMenuButton tooltip={item.title}>
-                    <a href={item.url}>
-                      <item.icon />
-                      <span>{item.title}</span>
-                    </a>
-                  </SidebarMenuButton>
-                </SidebarMenuItem>
-              ))}
-            </SidebarMenu>
-          </SidebarGroupContent>
-        </SidebarGroup>
-      </SidebarContent>
-    </Sidebar>
+    <div className="p w-64 bg-[#5C64E1]">
+      <div className="px-8 py-6">
+        <a href="/painel">
+          <span className="text-4xl font-bold flex">
+            <p className="text-[#7CDBFD]">IT</p>
+            <p className="text-white">-HELP</p>
+          </span>
+        </a>
+        {/* <h1 className="text-2xl font-bold">STOCKLY</h1> */}
+      </div>
+      <div className="flex flex-col gap-2 p-2">
+        <SidebarMenuButton className="pb-3">
+          <a href="" className="flex items-center text-xl gap-2">
+            <Plus color="white" />
+            <p className="text-white">Criar ticket</p>
+          </a>
+        </SidebarMenuButton>
+
+        <SidebarMenuButton className="pb-3">
+          <a href="" className="flex items-center text-[20px] gap-2">
+            <Ticket color="white" />
+            <p className="text-white">Tickets</p>
+          </a>
+        </SidebarMenuButton>
+
+        <SidebarMenuButton className="pb-3">
+          <a href="" className="flex items-center text-xl gap-2">
+            <Cog color="white" />
+            <p className="text-white">Configurações</p>
+          </a>
+        </SidebarMenuButton>
+
+        <SidebarMenuButton className="pb-3">
+          <a href="" className="flex items-center text-xl gap-2">
+            <User color="white" />
+            <p className="text-white">Usuários</p>
+          </a>
+        </SidebarMenuButton>
+      </div>
+    </div>
   );
 }
